@@ -14,7 +14,7 @@ spec:
         run: sample-api
     spec:
       containers:
-      - image: docker-springboot:latest 
+      - image: minji3262/git-argocd:docker-springboot
         name: sample-api
         ports:
         - containerPort: 8080

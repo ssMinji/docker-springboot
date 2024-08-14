@@ -7,20 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController	
-@RequestMapping("/api/v1/test")
+@RequestMapping("/api")
 public class TestController {
-	@GetMapping("/hello")
-    public ResponseEntity<Object> testApi() {
+	@GetMapping("/v1/hello")
+    public ResponseEntity<Object> testApiV1() {
         String result = "I'm BLUE.";
         return new ResponseEntity<>(result, HttpStatus.OK);
-    }		
-}
+    }	
 
-@RestController	
-@RequestMapping("/api/v2/test")
-public class TestController {
-	@GetMapping("/hello")
-    public ResponseEntity<Object> testApi() {
+    @GetMapping("/v2/hello")
+    public ResponseEntity<Object> testApiV2() {
         String result = "I'm GREEN.";
         return new ResponseEntity<>(result, HttpStatus.OK);
     }		

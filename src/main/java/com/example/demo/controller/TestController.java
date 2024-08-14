@@ -14,6 +14,14 @@ public class TestController {
         String result = "I'm BLUE.";
         return new ResponseEntity<>(result, HttpStatus.OK);
     }		
-	
+}
 
+@RestController	
+@RequestMapping("/api/v2/test")
+public class TestController {
+	@GetMapping("/hello")
+    public ResponseEntity<Object> testApi() {
+        String result = "I'm GREEN.";
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }		
 }
